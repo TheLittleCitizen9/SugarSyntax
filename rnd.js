@@ -6,11 +6,12 @@ var StringFormat = function(stringValue, dictValue){
             var key = stringValue.substring(startIndex+1, endIndex)
             if(key in dictValue){
                 stringValue = stringValue.replace("{"+key+"}", dictValue[key])
+                console.log(stringValue)
             }
             else{
+                console.log(stringValue)
                 throw "String doesn't exists in the dictionary"
             }
         }
     }
-    console.log(stringValue)
 }
